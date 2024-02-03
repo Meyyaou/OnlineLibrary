@@ -1,0 +1,116 @@
+body{
+   margin: 0;
+   font-family: 'Rubik', sans-serif;
+   background-color: #eee7dd;
+
+}
+  /*nav bar with home, books, aboutus and logout */
+  
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  li, a, button{
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+  }
+
+  .name-container{
+    cursor: pointer;
+  }
+.nav_links{
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+.nav_links li a:hover{
+    color: grey;
+}
+
+button{
+padding: 9px 25px;
+background-color: goldenrod;
+border: none;
+border-radius: 50px;
+cursor: pointer;
+transition: all 0.3s ease 0s;
+}
+
+button:hover{
+background-color: beige;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: rgb(245, 222, 187);
+}
+.first-section {
+    padding: 100px;
+}
+  /*description and small pic*/
+  .description{
+    maring-top: 220px;
+    max-width: 600px;
+}
+.description h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: black;
+}
+.image-section{
+    background: transparent;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    z-index: -2;
+}
+
+.image-section img{
+    display: block;
+    padding-top: 100px;
+    width: 500px;
+    margin-bottom: -205px;
+}
+/*use grid for books gallery*/
+  /*add a background with bookshelf opaque*/
+h2{
+    padding-bottom: 20px;
+    text-align: center;
+}
+.container{
+    --gap: 16px;
+    --num-cols: 4;
+    --row-height: 300px;
+
+    box-sizing: border-box;
+    padding: var(--gap);
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+}
+
+.container > img{
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
+
+@media screen and (max-width: 1024px){
+    .container{
+        -num-cols: 2;
+        --row-height:200px;
+    }
+}
